@@ -30,7 +30,12 @@ const Layout = ({ children }: { children: JSX.Element }) => {
       {/* <div>{children}</div> */}
       <div>
         {pageProps.map((page, index) => {
-          if (page.active === true) return <div>{page.page}</div>;
+          if (page.active === true)
+            return (
+              <div key={page.name} className="page">
+                {page.page}
+              </div>
+            );
         })}
       </div>
     </div>

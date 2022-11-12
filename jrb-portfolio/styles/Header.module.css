@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background: url("/protruding-squares.svg");
 }
 
 .wrapper {
@@ -23,14 +24,15 @@
   width: 230pt;
   border-radius: 50%;
   z-index: 1;
+  pointer-events: none;
 }
 
 .image_wrapper {
   display: flex;
+  height: auto;
+  width: auto;
   justify-content: center;
   align-items: center;
-  height: 250pt;
-  width: 250pt;
   cursor: pointer;
 }
 

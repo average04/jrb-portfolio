@@ -17,7 +17,6 @@ const Navbar = () => {
 
       <motion.div
         whileTap={{ scale: 0.9 }}
-        whileHover={{ scale: 1.1 }}
         className={styles.item}
         transition={{ duration: 0.1 }}
         onClick={() => handleChangePage(1)}
@@ -26,7 +25,6 @@ const Navbar = () => {
       </motion.div>
       <motion.div
         whileTap={{ scale: 0.9 }}
-        whileHover={{ scale: 1.1 }}
         className={styles.item}
         transition={{ duration: 0.1 }}
         onClick={() => handleChangePage(2)}
@@ -35,7 +33,6 @@ const Navbar = () => {
       </motion.div>
       <motion.div
         whileTap={{ scale: 0.9 }}
-        whileHover={{ scale: 1.1 }}
         className={styles.item}
         transition={{ duration: 0.1 }}
         onClick={() => handleChangePage(3)}

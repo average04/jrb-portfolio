@@ -7,15 +7,16 @@
   height: 45pt;
   background-image: linear-gradient(
     to right,
-    rgb(3, 2, 14),
-    rgb(11, 3, 37),
-    rgb(169, 166, 187)
+    rgb(223, 223, 223),
+    rgb(253, 253, 253),
+    rgb(169, 168, 175)
   );
   padding-left: 5pt;
   padding-right: 5pt;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  color: black;
 }
 
 .item {

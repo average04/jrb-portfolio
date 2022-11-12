@@ -42,8 +42,9 @@ export const modalSlice = createSlice({
   initialState,
   reducers: {
     setActivePage: (state, action) => {
-      let index = state.findIndex((x) => x.id === action.payload.id);
+      let index = state.findIndex((x) => x.id === action.payload);
       if (index != -1) {
+        state.forEach((x) => (x.active = false));
         state[index].active = true;
       }
     },
