@@ -1,0 +1,26 @@
+.container {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: auto;
+  border: 1px solid transparent;
+  height: 45pt;
+  background-image: linear-gradient(
+    to right,
+    rgb(3, 2, 14),
+    rgb(11, 3, 37),
+    rgb(169, 166, 187)
+  );
+  padding-left: 5pt;
+  padding-right: 5pt;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.item {
+  padding-left: 10pt;
+  padding-right: 5pt;
+  cursor: pointer;
+  font-size: 13pt;
+}
