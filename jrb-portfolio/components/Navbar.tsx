@@ -13,7 +13,14 @@ const Navbar = () => {
   };
   return (
     <div className={styles.container}>
-      <motion.div className={styles.item}>LOGO</motion.div>
+      <motion.div
+        whileTap={{ scale: 0.9 }}
+        transition={{ duration: 0.1 }}
+        className={styles.item}
+        onClick={() => handleChangePage(0)}
+      >
+        HOME
+      </motion.div>
 
       <motion.div
         whileTap={{ scale: 0.9 }}

@@ -3,7 +3,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: url("/protruding-squares.svg");
+  background: url("/slanted-gradient.svg") no-repeat;
+  background-size: cover;
 }
 
 .wrapper {
@@ -20,8 +21,8 @@
 }
 
 .image {
-  height: 230pt;
-  width: 230pt;
+  height: 200pt;
+  width: 200pt;
   border-radius: 50%;
   z-index: 1;
   pointer-events: none;
@@ -39,13 +40,9 @@
 .box {
   position: absolute;
   border-radius: 50%;
-  height: 260pt;
-  width: 260pt;
-  background-image: linear-gradient(
-    to right,
-    rgb(232, 234, 243),
-    rgb(46, 46, 50)
-  );
+  height: 230pt;
+  width: 230pt;
+  background-image: linear-gradient(to right, rgb(10, 59, 149), rgb(2, 2, 32));
   z-index: 0;
 }
 

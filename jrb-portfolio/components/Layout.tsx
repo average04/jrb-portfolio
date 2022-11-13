@@ -8,6 +8,8 @@ import { PageStateProps } from "../slice/Types";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../app/store";
 
+import { motion, AnimatePresence, Variant, Variants } from "framer-motion";
+
 const Layout = ({ children }: { children: JSX.Element }) => {
   const dispatch = useDispatch();
 
@@ -15,6 +17,30 @@ const Layout = ({ children }: { children: JSX.Element }) => {
     (state: RootState) => state.page
   );
 
+  const itemAnimations: Variants = {
+    initial: () => ({
+      x: "20%",
+      opacity: 0,
+      scale: 0.8,
+    }),
+    animate: () => ({
+      x: 0,
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delay: 0.5,
+        duration: 0.5,
+      },
+    }),
+    exit: () => ({
+      x: "-20%",
+      opacity: 0,
+      scale: 0.8,
+      transition: {
+        duration: 0.5,
+      },
+    }),
+  };
   return (
     <div>
       <Head>
@@ -28,16 +54,24 @@ const Layout = ({ children }: { children: JSX.Element }) => {
       <Header />
       <Navbar />
       {/* <div>{children}</div> */}
-      <div>
+      <AnimatePresence>
         {pageProps.map((page, index) => {
           if (page.active === true)
             return (
-              <div key={page.name} className="page">
+              <motion.div
+                variants={itemAnimations}
+                initial={"initial"}
+                animate={"animate"}
+                exit={"exit"}
+                transition={{ duration: 0.8 }}
+                key={page.name + page.id}
+                className="page"
+              >
                 {page.page}
-              </div>
+              </motion.div>
             );
         })}
-      </div>
+      </AnimatePresence>
     </div>
   );
 };

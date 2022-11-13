@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 40pt;
 }
 
 .catalog_wrapper {
@@ -13,9 +14,7 @@
   flex-wrap: wrap;
 }
 
-.catalog_item {
-  border: 1px solid white;
-  width: 200pt;
-  height: 200pt;
-  margin: 10pt;
+.catalog_wrapper:hover .image {
+  opacity: 60%;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }

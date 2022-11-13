@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 
 import Image from "next/image";
-import profile from "../public/profile.jpg";
+import profile from "../public/profile.png";
 
 const Header = () => {
   const constraintsRef = useRef(null);
@@ -30,8 +30,8 @@ const Header = () => {
           >
             <motion.div
               className={styles.box}
-              whileHover={{ rotate: [360, 0, 360, 0] }}
-              transition={{ ease: "linear", duration: 5 }}
+              animate={{ rotate: 360 }}
+              transition={{ ease: "linear", duration: 2, repeat: Infinity }}
             ></motion.div>
 
             <Image className={styles.image} src={profile} alt="profile" />

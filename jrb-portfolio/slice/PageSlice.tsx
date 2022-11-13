@@ -2,16 +2,17 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { stat } from "fs";
 import { PageStateProps } from "./Types";
 
-import { Portfolio } from "../components/Portfolio";
-import { About } from "../components/About";
-import { Contact } from "../components/Contact";
+import { Home } from "../components/Home/Home";
+import { Portfolio } from "../components/Portfolio/Portfolio";
+import { About } from "../components/About/About";
+import { Contact } from "../components/Contact/Contact";
 
 const initialState: PageStateProps[] = [
   {
     id: 0,
     name: "Home",
     description: "Home page",
-    page: <Portfolio />,
+    page: <Home />,
     active: true,
   },
   {
@@ -38,7 +39,7 @@ const initialState: PageStateProps[] = [
 ];
 
 export const modalSlice = createSlice({
-  name: "modal",
+  name: "page",
   initialState,
   reducers: {
     setActivePage: (state, action) => {

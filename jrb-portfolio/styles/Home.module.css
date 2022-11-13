@@ -1,0 +1,14 @@
+.container {
+  margin-top: 40pt;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.description {
+  text-align: center;
+  font-weight: lighter;
+  font-size: large;
+  padding: 5pt;
+}

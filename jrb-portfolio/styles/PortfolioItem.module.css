@@ -1,0 +1,31 @@
+.catalog_item {
+  width: 200pt;
+  height: 200pt;
+  margin: 10pt;
+  cursor: pointer;
+  mix-blend-mode: difference;
+  /* border: 1px solid white; */
+}
+
+.image {
+  object-fit: contain;
+  width: inherit;
+  height: inherit;
+}
+
+.description {
+  visibility: hidden;
+  position: absolute;
+  top: 100pt;
+  padding: 10pt;
+  font-size: 11pt;
+}
+
+.catalog_item:hover .image {
+  opacity: 60%;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.catalog_item:hover .description {
+  visibility: visible;
+}
